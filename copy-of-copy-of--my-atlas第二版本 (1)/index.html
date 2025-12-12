@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>My Atlas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              atlas: {
+                bg: '#f2f0e9', // Beige / Paper background
+                surface: '#fbfbf9', // Off-white surface
+                accent: '#4a6572', // Muted Blue-Grey
+                text: '#2d3436', // Dark Charcoal text
+                dim: '#636e72', // Dimmed Gray
+                alert: '#c0392b' // Muted Red
+              }
+            },
+            fontFamily: {
+              sans: ['Montserrat', 'system-ui', 'sans-serif'],
+              serif: ['Cormorant Garamond', 'serif']
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #f2f0e9;
+        color: #2d3436;
+        overflow: hidden; /* Prevent body scroll, handle in app */
+        font-family: 'Cormorant Garamond', serif; /* Default to elegant serif */
+        touch-action: none; /* Improve touch experience on mobile */
+      }
+      /* Custom scrollbar for minimalist look */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f2f0e9;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #dcd6cc;
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #b2bec3;
+      }
+      
+      /* Range Slider Customization for Beige Theme */
+      input[type=range] {
+        -webkit-appearance: none;
+        background: transparent;
+      }
+      input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+        background: #4a6572;
+        margin-top: -5px;
+        cursor: pointer;
+      }
+      input[type=range]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 2px;
+        background: #dcd6cc;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "vite": "https://esm.sh/vite@^7.2.7",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.33.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
