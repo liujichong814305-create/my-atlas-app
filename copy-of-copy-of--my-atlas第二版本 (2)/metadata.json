@@ -1,0 +1,8 @@
+{
+  "name": "Copy of Copy of  My Atlas第二版本",
+  "description": "An AI life coach utilizing cognitive psychology and strategic philosophy to provide deep, recursive analysis and plan supervision. / 一个利用认知心理学和战略哲学提供深度递归分析与计划监督的AI人生教练。",
+  "requestFramePermissions": [
+    "microphone",
+    "camera"
+  ]
+}
